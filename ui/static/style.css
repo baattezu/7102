@@ -1,0 +1,12 @@
+.music-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: cornflowerblue;
+    color: aqua;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

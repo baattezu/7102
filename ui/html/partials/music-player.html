@@ -1,0 +1,70 @@
+{{define "music_player"}}
+<!-- music-player.html -->
+<link rel="stylesheet" href="/style.css">
+
+<div>
+    <div class="player-info">
+        <strong>Now Playing:</strong> <span class="track-info">Track Name - Artist</span>
+    </div>
+    <div class="player-controls">
+        <button class="btn btn-outline-dark" id="prevBtn">
+            <i class="fa-solid fa-backward"></i>
+        </button>
+        <button class="btn btn-outline-dark" id="playBtn">
+            <i class="fa-solid fa-play"></i>
+        </button>
+        <button class="btn btn-outline-dark" id="pauseBtn">
+            <i class="fa-solid fa-pause"></i>
+        </button>
+        <button class="btn btn-outline-dark" id="nextBtn">
+            <i class="fa-solid fa-forward"></i>
+        </button>
+        <input type="range" class="form-range volume-control" id="volumeControl" value="0" max="100">
+    </div>
+</div>
+<div class="container">
+    <p class="songName">#22</p>
+    <a class="name">Dolu Kadehi Ters Tut</a>
+    <div>
+        <p>2:16</p>
+        <span></span>
+        <p>3:31</p>
+    </div>
+    <div class="controls">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 16 16" class="Svg-sc-1bi12j5-0 gSLhUO"><path d="M13 2.5L5 7.119V3H3v10h2V8.881l8 4.619z"></path></svg>
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 16 16" class="Svg-sc-1bi12j5-0 gSLhUO play-btn"><path d="M4.018 14L14.41 8 4.018 2z"></path></svg>
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 16 16" class="Svg-sc-1bi12j5-0 gSLhUO"><path d="M11 3v4.119L3 2.5v11l8-4.619V13h2V3z" ></path></svg>
+    </div>
+</div>
+</div>
+<script>
+    // JavaScript code for controlling the music player
+    const playBtn = document.getElementById('playBtn');
+    const pauseBtn = document.getElementById('pauseBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const volumeControl = document.getElementById('volumeControl');
+    const trackInfo = document.querySelector('.track-info');
+
+    playBtn.addEventListener('click', () => {
+        // Add logic to start playing the music
+        trackInfo.textContent = 'Playing: Track Name - Artist';
+    });
+
+    pauseBtn.addEventListener('click', () => {
+        // Add logic to pause the music
+        trackInfo.textContent = 'Paused: Track Name - Artist';
+    });
+
+    nextBtn.addEventListener('click', () => {
+        // Add logic to play the next track
+        trackInfo.textContent = 'Next Track: Track Name - Artist';
+    });
+
+    volumeControl.addEventListener('input', () => {
+        // Add logic to adjust the volume
+        const volumeValue = volumeControl.value;
+        // Update the volume based on the volumeValue
+    });
+</script>
+
+{{end}}
